@@ -17,7 +17,7 @@ public class SenderController {
 
 	WebClient webClient = WebClient.builder()
 	        .baseUrl("http://localhost:8080")
-	        .filter(new EncryptionFilter(ExchangeStrategies.builder().build().messageWriters()))
+	        .filter(new EncryptionFilter())
 	        .build();
 	
 	EncSender request = new EncSender();
